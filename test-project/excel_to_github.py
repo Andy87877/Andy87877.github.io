@@ -2,7 +2,8 @@ import pandas as pd
 
 def csv_to_html(csv_file, output_file="index.html"):
     # 讀取 CSV 檔案
-    df = pd.read_csv(csv_file)
+    df = pd.read_csv(csv_file, encoding="latin1")
+
     
     # 轉換成 HTML
     html_content = df.to_html(index=False)
